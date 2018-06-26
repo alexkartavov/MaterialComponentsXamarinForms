@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MaterialComponentsXamarinForms" x:Class="MaterialComponentsXamarinForms.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:MaterialComponentsXamarinForms" 
+             xmlns:ctrl="clr-namespace:MaterialComponentsXamarinForms.Components"
+             x:Class="MaterialComponentsXamarinForms.MainPage">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -11,10 +15,34 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="pgButton" Grid.Row="0" Grid.Column="0" Text="Buttons" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnPgButtonClicked"/>
-        <Button x:Name="pgActivity" Grid.Row="0" Grid.Column="1" Text="Activity" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <ctrl:XfMaterialButton x:Name="pgButton" 
+                                Grid.Row="0" 
+                                Grid.Column="0" 
+                                Text="Buttons" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center" 
+                                Clicked="OnPgButtonClicked"/>
+        <ctrl:XfMaterialButton x:Name="pgActivity" 
+                                Grid.Row="0" 
+                                Grid.Column="1" 
+                                Text="Activity" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center"
+                                Clicked="OnPgActivityClicked"/>
 
-        <Button x:Name="pgIcons" Grid.Row="1" Grid.Column="0" Text="Icons" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Button x:Name="pgSlider" Grid.Row="1" Grid.Column="1" Text="Slider" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <ctrl:XfMaterialButton x:Name="pgProgress" 
+                                Grid.Row="1" 
+                                Grid.Column="0" 
+                                Text="Progress" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center"
+                                Clicked="OnPgProgressClicked"/>
+        <ctrl:XfMaterialButton x:Name="pgSlider" 
+                                Grid.Row="1" 
+                                Grid.Column="1" 
+                                Text="Slider" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center"
+                                Clicked="OnPgSliderClicked"/>
     </Grid>
 </ContentPage>

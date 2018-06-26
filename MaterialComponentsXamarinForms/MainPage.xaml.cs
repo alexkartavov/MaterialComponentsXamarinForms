@@ -19,10 +19,20 @@ namespace MaterialComponentsXamarinForms
             await Navigation.PushAsync(new ButtonsPage());
         }
 
-        //void Handle_Clicked(object sender, System.EventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        private async void OnPgActivityClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new ActivityPage());
+        }
+
+        private async void OnPgProgressClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new ProgressPage());
+        }
+
+        private async void OnPgSliderClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new SliderPage());
+        }
     }
 
 }

@@ -2,17 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:ctrl="clr-namespace:MaterialComponentsXamarinForms.Components"
-             x:Class="MaterialComponentsXamarinForms.ButtonsPage">
+             x:Class="MaterialComponentsXamarinForms.ActivityPage">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         
-        <ctrl:XfMaterialButton x:Name="ctrlButton" 
-                               Grid.Row="0"
-                               Grid.Column="0"
-                               HorizontalOptions="Center" 
-                               VerticalOptions="Center" 
-                               Text="Button"/>
+        <ctrl:XfMaterialActivityIndicator x:Name="activityIndicator"
+                                          Grid.Row="0"
+                                          Grid.Column="1"/>
     </Grid>
 </ContentPage>

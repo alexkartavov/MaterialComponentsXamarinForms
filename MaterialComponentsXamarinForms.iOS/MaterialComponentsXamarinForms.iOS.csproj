@@ -94,6 +94,10 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Components\MaterialButtonRenderer.cs" />
+    <Compile Include="Components\MaterialActivityIndicatorRenderer.cs" />
+    <Compile Include="Components\MaterialProgressViewRenderer.cs" />
+    <Compile Include="Components\MaterialSliderRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -160,5 +164,8 @@
       <Project>{F888B10B-1D2E-44F5-AAE9-3335566E67A7}</Project>
       <Name>MaterialComponents</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
   </ItemGroup>
 </Project>

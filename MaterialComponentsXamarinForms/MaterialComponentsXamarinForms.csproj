@@ -7,4 +7,11 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="SliderPage.cs" />
+    <Compile Remove="MyPage.xaml.cs" />
+  </ItemGroup>
 </Project>
