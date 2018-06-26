@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MaterialComponentsXamarinForms" x:Class="MaterialComponentsXamarinForms.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="pgButton" Grid.Row="0" Grid.Column="0" Text="Buttons" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnPgButtonClicked"/>
+        <Button x:Name="pgActivity" Grid.Row="0" Grid.Column="1" Text="Activity" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        <Button x:Name="pgIcons" Grid.Row="1" Grid.Column="0" Text="Icons" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Button x:Name="pgSlider" Grid.Row="1" Grid.Column="1" Text="Slider" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </Grid>
+</ContentPage>
