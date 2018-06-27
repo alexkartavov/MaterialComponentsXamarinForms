@@ -18,15 +18,17 @@ namespace MaterialComponentsXamarinForms.iOS.Components
         {
         }
 
+        MDCActivityIndicator _ctrl;
+
         protected override void OnElementChanged(ElementChangedEventArgs<XfMaterialActivityIndicator> e)
         {
             if (e.NewElement != null)
             {
                 if (Control == null)
                 {
-                    var ctrl = new MDCActivityIndicator();
+                    _ctrl = new MDCActivityIndicator();
 
-                    SetNativeControl(ctrl);
+                    SetNativeControl(_ctrl);
                 }
 
                 UpdateColor();
@@ -48,7 +50,17 @@ namespace MaterialComponentsXamarinForms.iOS.Components
 
         void UpdateColor()
         {
-            Control.TintColor = Element.Color == Color.Default ? null : Element.Color.ToUIColor();
+            if (Element.Color == Color.Default)
+                _ctrl.CycleColors = new UIColor[] {};
+            else
+                _ctrl.CycleColors = new UIColor[] { Element.Color.ToUIColor() };
+            //if(Control.CycleColors!=null)
+            //{
+            //    for (var i = 0; i < Control.CycleColors.Length; i++)
+            //    {
+            //        Control.CycleColors[i] = Element.Color.ToUIColor();
+            //    }
+            //}
         }
 
         void UpdateIsRunning()

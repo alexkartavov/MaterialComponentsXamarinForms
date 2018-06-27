@@ -7,9 +7,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         
         <ctrl:XfMaterialActivityIndicator x:Name="activityIndicator"
                                           Grid.Row="0"
-                                          Grid.Column="1"/>
+                                          Grid.Column="0"
+                                          IsRunning="true"/>
     </Grid>
 </ContentPage>
