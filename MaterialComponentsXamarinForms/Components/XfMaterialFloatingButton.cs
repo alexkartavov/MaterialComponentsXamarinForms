@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace MaterialComponentsXamarinForms.Components
 {
-    public class XfMaterialFloatingButton: Button
+    public class XfMaterialFloatingButton: XfMaterialButton
     {
         public XfMaterialFloatingButton()
         {

@@ -6,13 +6,112 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        
-        <ctrl:XfMaterialButton x:Name="ctrlButton" 
-                               Grid.Row="0"
-                               Grid.Column="0"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Contained" 
+               Grid.Row="0" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+        <ctrl:XfMaterialButton Grid.Row="0"
+                               Grid.Column="1"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                Text="Button"/>
+
+        <Label Text="Disabled" 
+               Grid.Row="1" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+        <ctrl:XfMaterialButton Grid.Row="1"
+                               Grid.Column="1"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Text="Button"
+                               IsEnabled="false" />
+
+        <Label Text="Text button" 
+               Grid.Row="2" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+        <ctrl:XfMaterialButton Grid.Row="2"
+                               Grid.Column="1"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Text="Button"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               BorderColor="Transparent"
+                               BorderWidth="0"/>
+
+        <Label Text="Disabled text button" 
+               Grid.Row="3" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+        <ctrl:XfMaterialButton Grid.Row="3"
+                               Grid.Column="1"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Text="Button"
+                               IsEnabled="false"
+                               BackgroundColor="Transparent"
+                               BorderColor="Transparent"
+                               BorderWidth="0"/>
+
+        <Label Text="Outlined" 
+               Grid.Row="4" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+        <ctrl:XfMaterialButton Grid.Row="4"
+                               Grid.Column="1"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Text="Button"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               BorderWidth="1"
+                               BorderColor="Black"/>
+
+        <Label Text="Disabled Outlined" 
+               Grid.Row="5" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+        <ctrl:XfMaterialButton Grid.Row="5"
+                               Grid.Column="1"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Text="Button"
+                               IsEnabled="false"
+                               BackgroundColor="Transparent"
+                               BorderWidth="1"
+                               BorderColor="Black"/>
+
+        <Label Text="Floating Action" 
+               Grid.Row="6" 
+               Grid.Column="0"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+        <ctrl:XfMaterialFloatingButton Grid.Row="6"
+                               Grid.Column="1"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Text="+"
+                               FontSize="24pt"
+                               BackgroundColor="Green"/>
     </Grid>
 </ContentPage>
