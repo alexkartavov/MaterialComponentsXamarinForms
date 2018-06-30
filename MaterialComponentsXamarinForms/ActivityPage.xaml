@@ -3,17 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:ctrl="clr-namespace:MaterialComponentsXamarinForms.Components"
              x:Class="MaterialComponentsXamarinForms.ActivityPage">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        <ctrl:XfMaterialActivityIndicator x:Name="activityIndicator"
-                                          Grid.Row="0"
+
+        <ctrl:XfMaterialActivityIndicator Grid.Row="0"
                                           Grid.Column="0"
+                                          Color="Black"
+                                          IndicatorMode="Determinate"
+                                          Progress="0.6"
+                                          />
+        
+        <ctrl:XfMaterialActivityIndicator Grid.Row="0"
+                                          Grid.Column="1"
                                           IsRunning="true"/>
+
+        <ctrl:XfMaterialActivityIndicator Grid.Row="0"
+                                          Grid.Column="2"
+                                          IsRunning="true"
+                                          Color="Black"/>
     </Grid>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using MaterialComponents;
 using MaterialComponents.MaterialActivityIndicator;
 using MaterialComponentsXamarinForms.Components;
 using MaterialComponentsXamarinForms.iOS.Components;
@@ -18,7 +19,10 @@ namespace MaterialComponentsXamarinForms.iOS.Components
         {
         }
 
-        MDCActivityIndicator _ctrl;
+        protected override MDCActivityIndicator CreateNativeControl()
+        {
+            return new MDCActivityIndicator();
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<XfMaterialActivityIndicator> e)
         {
@@ -26,13 +30,13 @@ namespace MaterialComponentsXamarinForms.iOS.Components
             {
                 if (Control == null)
                 {
-                    _ctrl = new MDCActivityIndicator();
-
-                    SetNativeControl(_ctrl);
+                    SetNativeControl(CreateNativeControl());
                 }
 
                 UpdateColor();
                 UpdateIsRunning();
+                UpdateIndicatorMode();
+                UpdateProgress();
             }
 
             base.OnElementChanged(e);
@@ -46,14 +50,18 @@ namespace MaterialComponentsXamarinForms.iOS.Components
                 UpdateColor();
             else if (e.PropertyName == ActivityIndicator.IsRunningProperty.PropertyName)
                 UpdateIsRunning();
+            else if (e.PropertyName == XfMaterialActivityIndicator.IndicatorModePropertyName)
+                UpdateIndicatorMode();
+            else if (e.PropertyName == XfMaterialActivityIndicator.ProgressPropertyName)
+                UpdateProgress();
         }
 
         void UpdateColor()
         {
             if (Element.Color == Color.Default)
-                _ctrl.CycleColors = new UIColor[] {};
+                Control.CycleColors = new UIColor[] {};
             else
-                _ctrl.CycleColors = new UIColor[] { Element.Color.ToUIColor() };
+                Control.CycleColors = new UIColor[] { Element.Color.ToUIColor() };
             //if(Control.CycleColors!=null)
             //{
             //    for (var i = 0; i < Control.CycleColors.Length; i++)
@@ -75,6 +83,25 @@ namespace MaterialComponentsXamarinForms.iOS.Components
         {
             if (Control != null && !Control.Animating && Element != null && Element.IsRunning)
                 Control.StartAnimating();
+        }
+
+        void UpdateIndicatorMode()
+        {
+            Control.IndicatorMode = 
+                Element.IndicatorMode == ActivityIndicatorMode.Indeterminate 
+                    ? MDCActivityIndicatorMode.Indeterminate 
+                    : MDCActivityIndicatorMode.Determinate;
+        }
+
+        void UpdateProgress()
+        {
+            //Control.StopAnimating();
+            if (!Control.Animating)
+            {
+                Control.StartAnimating();
+                Control.Progress = (float)Element.Progress;
+                Control.StopAnimating();
+            }
         }
     }
 }

@@ -21,7 +21,7 @@
         <Label Text="Contained" 
                Grid.Row="0" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center"/>
         <ctrl:XfMaterialButton Grid.Row="0"
                                Grid.Column="1"
@@ -32,7 +32,7 @@
         <Label Text="Disabled" 
                Grid.Row="1" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center" />
         <ctrl:XfMaterialButton Grid.Row="1"
                                Grid.Column="1"
@@ -44,7 +44,7 @@
         <Label Text="Text button" 
                Grid.Row="2" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center" />
         <ctrl:XfMaterialButton Grid.Row="2"
                                Grid.Column="1"
@@ -59,7 +59,7 @@
         <Label Text="Disabled text button" 
                Grid.Row="3" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center" />
         <ctrl:XfMaterialButton Grid.Row="3"
                                Grid.Column="1"
@@ -74,7 +74,7 @@
         <Label Text="Outlined" 
                Grid.Row="4" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center" />
         <ctrl:XfMaterialButton Grid.Row="4"
                                Grid.Column="1"
@@ -89,7 +89,7 @@
         <Label Text="Disabled Outlined" 
                Grid.Row="5" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center" />
         <ctrl:XfMaterialButton Grid.Row="5"
                                Grid.Column="1"
@@ -104,14 +104,13 @@
         <Label Text="Floating Action" 
                Grid.Row="6" 
                Grid.Column="0"
-               HorizontalOptions="Center" 
+               HorizontalOptions="End" 
                VerticalOptions="Center" />
         <ctrl:XfMaterialFloatingButton Grid.Row="6"
                                Grid.Column="1"
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                Text="+"
-                               FontSize="24pt"
                                BackgroundColor="Green"/>
     </Grid>
 </ContentPage>
