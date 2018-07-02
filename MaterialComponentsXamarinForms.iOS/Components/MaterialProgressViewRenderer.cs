@@ -14,20 +14,17 @@ namespace MaterialComponentsXamarinForms.iOS.Components
 {
     public class MaterialProgressViewRenderer: ViewRenderer<XfMaterialProgressView, MDCProgressView>
     {
-        //public SizeF SizeThatFits(SizeF size)
-        //{
-        //    // progress bar will size itself to be as wide as the request, even if its inifinite
-        //    // we want the minimum need size
-        //    var result = base.SizeThatFits(size);
-        //    return new SizeF(10, result.Height);
-        //}
+        protected override MDCProgressView CreateNativeControl()
+        {
+            return new MDCProgressView();
+        }
 
         protected override void OnElementChanged(ElementChangedEventArgs<XfMaterialProgressView> e)
         {
             if (e.NewElement != null)
             {
                 if (Control == null)
-                    SetNativeControl(new MDCProgressView());
+                    SetNativeControl(CreateNativeControl());
 
                 UpdateProgressColor();
                 UpdateProgress();
@@ -46,19 +43,29 @@ namespace MaterialComponentsXamarinForms.iOS.Components
                 UpdateProgress();
         }
 
+        nfloat colorDesaturation = 0.3f;
         protected override void SetBackgroundColor(Color color)
         {
             base.SetBackgroundColor(color);
 
             if (Control == null)
                 return;
+            
+            if (color == Color.Default)
+            {
+                var c = Control.ProgressTintColor;
+                c.GetHSBA(out var hue, out var saturation, out var brightness, out var alpha);
+                saturation = (nfloat)Math.Min((double)saturation * colorDesaturation, 1.0);
+                Control.TrackTintColor = UIColor.FromHSBA(hue, saturation, brightness, alpha);
+                return;
+            }
 
-            Control.TrackTintColor = color != Color.Default ? color.ToUIColor() : null;
+            Control.TrackTintColor = color.ToUIColor();
         }
 
         void UpdateProgressColor()
         {
-            //Control.ProgressTintColor = Element.ProgressColor == Color.Default ? null : Element.ProgressColor.ToUIColor();
+            Control.ProgressTintColor = Element.ProgressColor == Color.Default ? Color.Blue.ToUIColor() : Element.ProgressColor.ToUIColor();
         }
 
         void UpdateProgress()

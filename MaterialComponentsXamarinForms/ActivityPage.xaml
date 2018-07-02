@@ -10,22 +10,15 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ctrl:XfMaterialActivityIndicator Grid.Row="0"
-                                          Grid.Column="0"
-                                          Color="Black"
-                                          IndicatorMode="Determinate"
-                                          Progress="0.6"
-                                          />
         
         <ctrl:XfMaterialActivityIndicator Grid.Row="0"
-                                          Grid.Column="1"
+                                          Grid.Column="0"
                                           IsRunning="true"/>
 
         <ctrl:XfMaterialActivityIndicator Grid.Row="0"
-                                          Grid.Column="2"
+                                          Grid.Column="1"
                                           IsRunning="true"
                                           Color="Black"/>
     </Grid>

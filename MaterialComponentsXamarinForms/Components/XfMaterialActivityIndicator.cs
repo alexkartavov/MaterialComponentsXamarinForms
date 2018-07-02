@@ -9,27 +9,27 @@ namespace MaterialComponentsXamarinForms.Components
         {
         }
 
-        public static readonly string IndicatorModePropertyName = "IndicatorMode";
+        //public static readonly string IndicatorModePropertyName = "IndicatorMode";
 
-        public static readonly BindableProperty IndicatorModeProperty =
-            BindableProperty.Create(IndicatorModePropertyName, typeof(ActivityIndicatorMode), typeof(XfMaterialActivityIndicator), ActivityIndicatorMode.Indeterminate);
+        //public static readonly BindableProperty IndicatorModeProperty =
+        //    BindableProperty.Create(IndicatorModePropertyName, typeof(ActivityIndicatorMode), typeof(XfMaterialActivityIndicator), ActivityIndicatorMode.Indeterminate);
 
-        public ActivityIndicatorMode IndicatorMode
-        {
-            get { return (ActivityIndicatorMode)base.GetValue(IndicatorModeProperty); }
-            set { base.SetValue(IndicatorModeProperty, value); }
-        }
+        //public ActivityIndicatorMode IndicatorMode
+        //{
+        //    get { return (ActivityIndicatorMode)base.GetValue(IndicatorModeProperty); }
+        //    set { base.SetValue(IndicatorModeProperty, value); }
+        //}
 
-        public static readonly string ProgressPropertyName = "Progress";
+        //public static readonly string ProgressPropertyName = "Progress";
 
-        public static readonly BindableProperty ProgressProperty =
-            BindableProperty.Create(ProgressPropertyName, typeof(double), typeof(XfMaterialActivityIndicator), default(double));
+        //public static readonly BindableProperty ProgressProperty =
+        //    BindableProperty.Create(ProgressPropertyName, typeof(double), typeof(XfMaterialActivityIndicator), default(double));
 
-        public double Progress
-        {
-            get { return (double)base.GetValue(ProgressProperty); }
-            set { base.SetValue(ProgressProperty, value); }
-        }
+        //public double Progress
+        //{
+        //    get { return (double)base.GetValue(ProgressProperty); }
+        //    set { base.SetValue(ProgressProperty, value); }
+        //}
 
         /*public static readonly BindableProperty AnimatingProperty =
             BindableProperty.Create("Animating", typeof(bool), false);

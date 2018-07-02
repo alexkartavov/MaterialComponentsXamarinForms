@@ -9,7 +9,9 @@
         </Grid.RowDefinitions>
         
         <ctrl:XfMaterialProgressView x:Name="progressView"
-                                          Grid.Row="0"
-                                          Grid.Column="1"/>
+                                     Grid.Row="0"
+                                     Grid.Column="0"
+                                     Margin="10"
+                                     Progress="0.4"/>
     </Grid>
 </ContentPage>

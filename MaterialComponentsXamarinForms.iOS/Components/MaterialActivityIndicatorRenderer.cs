@@ -35,8 +35,6 @@ namespace MaterialComponentsXamarinForms.iOS.Components
 
                 UpdateColor();
                 UpdateIsRunning();
-                UpdateIndicatorMode();
-                UpdateProgress();
             }
 
             base.OnElementChanged(e);
@@ -50,10 +48,6 @@ namespace MaterialComponentsXamarinForms.iOS.Components
                 UpdateColor();
             else if (e.PropertyName == ActivityIndicator.IsRunningProperty.PropertyName)
                 UpdateIsRunning();
-            else if (e.PropertyName == XfMaterialActivityIndicator.IndicatorModePropertyName)
-                UpdateIndicatorMode();
-            else if (e.PropertyName == XfMaterialActivityIndicator.ProgressPropertyName)
-                UpdateProgress();
         }
 
         void UpdateColor()
@@ -62,13 +56,6 @@ namespace MaterialComponentsXamarinForms.iOS.Components
                 Control.CycleColors = new UIColor[] {};
             else
                 Control.CycleColors = new UIColor[] { Element.Color.ToUIColor() };
-            //if(Control.CycleColors!=null)
-            //{
-            //    for (var i = 0; i < Control.CycleColors.Length; i++)
-            //    {
-            //        Control.CycleColors[i] = Element.Color.ToUIColor();
-            //    }
-            //}
         }
 
         void UpdateIsRunning()
@@ -85,23 +72,5 @@ namespace MaterialComponentsXamarinForms.iOS.Components
                 Control.StartAnimating();
         }
 
-        void UpdateIndicatorMode()
-        {
-            Control.IndicatorMode = 
-                Element.IndicatorMode == ActivityIndicatorMode.Indeterminate 
-                    ? MDCActivityIndicatorMode.Indeterminate 
-                    : MDCActivityIndicatorMode.Determinate;
-        }
-
-        void UpdateProgress()
-        {
-            //Control.StopAnimating();
-            if (!Control.Animating)
-            {
-                Control.StartAnimating();
-                Control.Progress = (float)Element.Progress;
-                Control.StopAnimating();
-            }
-        }
     }
 }
