@@ -8,6 +8,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -44,5 +45,20 @@
                                 HorizontalOptions="Center" 
                                 VerticalOptions="Center"
                                 Clicked="OnPgSliderClicked"/>
+
+        <ctrl:XfMaterialButton x:Name="pgEntry"
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               Text="Entry"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Clicked="OnPgEntryClicked"/>
+        <ctrl:XfMaterialButton x:Name="pgEditor"
+                               Grid.Row="2"
+                               Grid.Column="1"
+                               Text="Editor"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Clicked="OnPgEditorClicked"/>
     </Grid>
 </ContentPage>

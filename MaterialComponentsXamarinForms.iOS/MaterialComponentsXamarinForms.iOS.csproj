@@ -99,6 +99,7 @@
     <Compile Include="Components\MaterialProgressViewRenderer.cs" />
     <Compile Include="Components\MaterialSliderRenderer.cs" />
     <Compile Include="Components\MaterialFloatingButtonRenderer.cs" />
+    <Compile Include="Components\MaterialEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

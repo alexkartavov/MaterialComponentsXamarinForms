@@ -33,6 +33,16 @@ namespace MaterialComponentsXamarinForms
         {
             await Navigation.PushAsync(new SliderPage());
         }
+
+        private async void OnPgEntryClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new EntryPage());
+        } 
+
+        private async void OnPgEditorClicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new EditorPage());
+        }
     }
 
 }
