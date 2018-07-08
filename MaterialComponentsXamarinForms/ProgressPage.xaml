@@ -6,12 +6,30 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         
-        <ctrl:XfMaterialProgressView x:Name="progressView"
+        <ctrl:XfMaterialProgressView x:Name="progressView1"
                                      Grid.Row="0"
                                      Grid.Column="0"
                                      Margin="10"
-                                     Progress="0.4"/>
+                                     Progress="0.0"
+                                     VerticalOptions="Center"
+                                     HeightRequest="2"
+                                     ProgressColor="Blue"
+                                     />
+
+        <ctrl:XfMaterialProgressView x:Name="progressView2"
+                                     Grid.Row="1"
+                                     Grid.Column="0"
+                                     Margin="10"
+                                     Progress="0.0"
+                                     VerticalOptions="Center"
+                                     HeightRequest="2"
+                                     ProgressColor="Red"/>
     </Grid>
 </ContentPage>

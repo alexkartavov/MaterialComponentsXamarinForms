@@ -13,7 +13,8 @@
 
         <ctrl:XfMaterialEntry Grid.Row="0" 
                               Grid.Column="0"
-                              Margin="10">
+                              Margin="10"
+                              Placeholder="Hello">
             
         </ctrl:XfMaterialEntry>
     </Grid>

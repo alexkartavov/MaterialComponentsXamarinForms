@@ -60,7 +60,7 @@ namespace MaterialComponentsXamarinForms.iOS.Components
 
         void UpdateValue()
         {
-            Control.Value = (float)Element.Value;
+            Control.SetValue((float)Element.Value, true);
         }
     }
 }

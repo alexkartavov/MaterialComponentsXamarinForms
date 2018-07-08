@@ -19,7 +19,9 @@ namespace MaterialComponentsXamarinForms.iOS.Components
 
         protected override MDCTextField CreateNativeControl()
         {
-            return new MDCTextField();
+            var ctrl = new MDCTextField();
+            ctrl.Underline.Enabled = true;
+            return ctrl;
         }
 
         UIColor _defaultTextColor;

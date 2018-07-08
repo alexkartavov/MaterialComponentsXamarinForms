@@ -57,6 +57,7 @@ namespace MaterialComponentsXamarinForms.iOS.Components
                 c.GetHSBA(out var hue, out var saturation, out var brightness, out var alpha);
                 saturation = (nfloat)Math.Min((double)saturation * colorDesaturation, 1.0);
                 Control.TrackTintColor = UIColor.FromHSBA(hue, saturation, brightness, alpha);
+                Control.SetNeedsDisplay();
                 return;
             }
 
@@ -66,11 +67,12 @@ namespace MaterialComponentsXamarinForms.iOS.Components
         void UpdateProgressColor()
         {
             Control.ProgressTintColor = Element.ProgressColor == Color.Default ? Color.Blue.ToUIColor() : Element.ProgressColor.ToUIColor();
+            SetBackgroundColor(Color.Default);
         }
 
         void UpdateProgress()
         {
-            Control.Progress = (float)Element.Progress;
+            Control.SetProgress((float)Element.Progress, true, null);
         }
     }
 }
